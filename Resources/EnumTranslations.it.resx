@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <data name="MyEnum_Default" xml:space="preserve">
+    <value>Default</value>
+  </data>
+    <data name="MyEnum_Example" xml:space="preserve">
+    <value>Esempio</value>
+  </data>
+    <data name="MyEnum_OtherValue" xml:space="preserve">
+    <value>AltroValore</value>
+  </data>
+</root>
