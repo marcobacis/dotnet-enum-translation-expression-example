@@ -1,6 +1,7 @@
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using EnumTranslator;
+using EnumTranslatorApp;
 using Gridify;
 using Microsoft.EntityFrameworkCore;
 
@@ -36,11 +37,14 @@ var localizationOptions = new RequestLocalizationOptions()
     .AddSupportedCultures(supportedCultures)
     .AddSupportedUICultures(supportedCultures);
 
-app.UseMiddleware<CultureQueryStringMiddleware>();
 app.UseRequestLocalization(localizationOptions);
+
+// Allow setting culture from query string (useful for debugging)
+app.UseMiddleware<CultureQueryStringMiddleware>();
 
 app.UseHttpsRedirection();
 
+// Example endpoint with filtering based on translated enum value representation (using gridify)
 app.MapGet(
         "/example",
         async (

@@ -1,12 +1,18 @@
+using System.Collections.Immutable;
 using System.Globalization;
+using Microsoft.Extensions.Options;
+
+namespace EnumTranslatorApp;
 
 public class CultureQueryStringMiddleware
 {
     private readonly RequestDelegate _next;
-
-    public CultureQueryStringMiddleware(RequestDelegate next)
+    private readonly ImmutableHashSet<string> _supportedCultures;
+    
+    public CultureQueryStringMiddleware(RequestDelegate next,  IOptions<RequestLocalizationOptions> localizationOptions)
     {
         _next = next;
+        _supportedCultures = (localizationOptions.Value.SupportedCultures ?? []).Select(c => c.TwoLetterISOLanguageName.ToLowerInvariant()).ToImmutableHashSet();
     }
 
     public async Task InvokeAsync(HttpContext context)
@@ -15,7 +21,7 @@ public class CultureQueryStringMiddleware
         if (!string.IsNullOrEmpty(cultureQuery))
         {
             var culture = cultureQuery.ToString();
-            if (new[] { "en", "fr", "es" }.Contains(culture))
+            if (_supportedCultures.Contains(culture.ToLowerInvariant()))
             {
                 var requestCulture = new CultureInfo(culture);
                 CultureInfo.CurrentCulture = requestCulture;
