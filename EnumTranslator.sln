@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumTranslator", "EnumTranslator.csproj", "{A669C16D-525D-488D-A20F-E44F7946125B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumTranslatorApp", "EnumTranslatorApp\EnumTranslatorApp.csproj", "{A669C16D-525D-488D-A20F-E44F7946125B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumTranslatorExpression", "EnumTranslatorExpression\EnumTranslatorExpression.csproj", "{64EC288E-6726-4EE3-B8AB-E19DB5A5FF75}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +14,9 @@ Global
 		{A669C16D-525D-488D-A20F-E44F7946125B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A669C16D-525D-488D-A20F-E44F7946125B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A669C16D-525D-488D-A20F-E44F7946125B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64EC288E-6726-4EE3-B8AB-E19DB5A5FF75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64EC288E-6726-4EE3-B8AB-E19DB5A5FF75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64EC288E-6726-4EE3-B8AB-E19DB5A5FF75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64EC288E-6726-4EE3-B8AB-E19DB5A5FF75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

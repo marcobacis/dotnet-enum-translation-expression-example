@@ -28,7 +28,7 @@ namespace EnumTranslator {
         internal static System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.Equals(null, resourceMan)) {
-                    System.Resources.ResourceManager temp = new System.Resources.ResourceManager("EnumTranslator.Resources.EnumTranslations", typeof(EnumTranslations).Assembly);
+                    System.Resources.ResourceManager temp = new System.Resources.ResourceManager("EnumTranslatorApp.Resources.EnumTranslations", typeof(EnumTranslations).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

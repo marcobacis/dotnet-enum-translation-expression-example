@@ -22,7 +22,7 @@ public class CultureQueryStringMiddleware
                 CultureInfo.CurrentUICulture = requestCulture;
             }
         }
-        
+
         await _next(context);
     }
 }
